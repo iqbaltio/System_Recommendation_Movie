@@ -107,7 +107,19 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
     ```
 
 - Dan berikut adalah hasil 10 film yang direkomendasikan dari model *content-based filtering* :
-  ![Capture](https://user-images.githubusercontent.com/77862455/197955219-9684cc54-1ddc-446b-bbee-8f25804db60c.PNG)
+  
+  | MovieName	| MovieGenre|
+  |-----------|-----------|
+	|kubo and the two strings|	Animation, Action, Adventure|
+	|spider man into the spider verse|	Animation, Action, Adventure|
+	|mononoke hime|	Animation, Action, Adventure|
+	|incredibles 2|	Animation, Action, Adventure|
+	|the iron giant|	Animation, Action, Adventure|
+	|the incredibles|	Animation, Action, Adventure|
+	|how to train your dragon|	Animation, Action, Adventure|
+	|how to train your dragon 2|	Animation, Action, Adventure|
+	|tangled|	Animation, Adventure, Comedy|
+	|batman begins|	Action, Adventure|
 
     <em>Gambar 6. Hasil dari Content-based filtering</em> 
 
