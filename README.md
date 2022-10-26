@@ -27,3 +27,32 @@ Solusi yang saya pilih untuk menyelesaikan masalah ini adalah dengan menggunakan
 
 ## Data Understanding
 Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/datasets/harshitshankhdhar/imdb-dataset-of-top-1000-movies-and-tv-shows) yang berisi informasi tentang top 1000 berdasarkan rating halaman IMDB, Analisis Data Eksplorasi mencakup proses mengidentifikasi pola,menemukan anomali,menguji hipotesis, dan memeriksa asumsi melalui statistik ringkasan.
+
+- Dataset ini memiliki 1000 data dan memiliki 16 kolom dalam dataset kali ini namun dalam proyek ini saya hanya menggunakan 6 kolom, berikut penjelasannya :
+
+  - Series_Title : Judul dari film
+  - Certificate : Rating umur pada film
+  - Genre : Genre film
+  - IMDB_Rating : Nilai rating yang diberikan oleh IMDB
+  - Meta_score : Skor yang didapat oleh film
+  - Director : Nama dari direktor film
+  
+### Analisis Data Eksplorasi
+
+#### Univariate Analysis
+- Informasi yang bisa didapat dari hasil eksplorasi pada variabel pada dataset
+
+    ![Bar_chart](https://user-images.githubusercontent.com/77862455/197951116-7469c44c-9472-4f14-aa14-7d74a6b748df.png)
+
+    <em>Gambar 1. Univariate Analysis</em>
+
+- Informasi yang saya dapat dari data diatas adalah :
+    - Film dengan rating U memiliki jumlah paling banyak
+    - Film dengan rating GP memiliki jumlah paling sedikit
+
+    ![distplot](https://user-images.githubusercontent.com/77862455/197951534-8e83aef9-dd95-46e8-9577-b6bb04f782d7.png)
+
+    <em>Gambar 2. Univariate Analysis</em>
+
+- Informasi yang saya dapat dari data diatas adalah :
+    - Banyak film yang memiliki rentang nilai dari 7-8 dibandingkan dengan rentang yang lainnya.
