@@ -56,3 +56,18 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
 
 - Informasi yang saya dapat dari data diatas adalah :
     - Banyak film yang memiliki rentang nilai dari 7-8 dibandingkan dengan rentang yang lainnya.
+
+
+#### Multivariate Analysis
+
+ ![multi](https://user-images.githubusercontent.com/77862455/197952822-14ea477e-eaa6-4a93-8439-b3990e8c02bd.PNG)
+
+ <em>Gambar 3. Multivariate Analysis</em>
+
+## Data Preparation
+
+Sebelum melakukan pembuatan model, perlu dilakukan data preparation, berikut adalah hal yang dilakukan pada proses data preparation
+
+- **Drop Missing Value** : ini bertujuan untuk membersihkan data agar tidak ada data yang kosong, karena data kosong sangat mempengaruhi hasil akurasi dari model, disini saya membuang beberapa variabel yaitu 'Poster_Link','Released_Year', 'Runtime', 'Overview', 'Star1', 'Star2', 'Star3', 'Star4', 'No_of_Votes', 'Gross'
+
+- **Text Cleaning** : ini bertujuan untuk menghapus simbol ataupun teks yang tidak diperlukan dan mengubah semua huruf menjadi huruf kecil
