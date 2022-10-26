@@ -71,3 +71,30 @@ Sebelum melakukan pembuatan model, perlu dilakukan data preparation, berikut ada
 - **Drop Missing Value** : ini bertujuan untuk membersihkan data agar tidak ada data yang kosong, karena data kosong sangat mempengaruhi hasil akurasi dari model, disini saya membuang beberapa variabel yaitu 'Poster_Link','Released_Year', 'Runtime', 'Overview', 'Star1', 'Star2', 'Star3', 'Star4', 'No_of_Votes', 'Gross'
 
 - **Text Cleaning** : ini bertujuan untuk menghapus simbol ataupun teks yang tidak diperlukan dan mengubah semua huruf menjadi huruf kecil
+
+## Modeling
+
+Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-based filtering*.
+- Saya juga menggunakan ``TF-IDF Vectorizer`` untuk membangun sistem rekomendasi berdasarkan genre, dimana ``TF-IDF`` berfungsi untuk mengukur seberapa pentingnya suatu kata terhadap kata-kata lain dalam dokumen.
+- Selanjutnya saya melakukan fit dan transformasi kedalam bentuk matriks, untuk menghitung derajat kesamaan antar film, disini saya menggunakan teknik *cosine similarity*
+- Berikut adalah hasil dari teknik *cosine similarity*
+
+    ![cosine](https://user-images.githubusercontent.com/77862455/197954157-9ad97dee-f019-465b-9119-408ce626ea20.PNG)
+
+    <em>Gambar 4. Hasil dari Cosine Similarity</em>
+
+    ![hasilcosine](https://user-images.githubusercontent.com/77862455/197954208-26f4e08f-894f-4cd7-b92c-ca70546dc7de.PNG)
+
+    <em>Gambar 5. Hasil dari Cosine Similarity</em>
+
+- Lalu setelah melakukan teknik *cosine similarity* dan muncul rekomendasi, maka saya mencoba membuat fungsi untuk meminta rekomendasi film berdasarkan judul yang saya inputkan.
+    ```
+    get_Movie_Recommendations('big hero 6')
+    ```
+
+- Dan berikut adalah hasil 10 anime yang direkomendasikan dari model *content-based filtering* :
+  ![hasilrek](https://user-images.githubusercontent.com/77862455/197954543-d4205574-cf51-453a-bf55-f4fef0af908e.PNG)
+
+    <em>Gambar 6. Hasil dari Content-based filtering</em> 
+
+    Model berhasil memberikan rekomendasi 10 film dengan genre yang sama seperti yang diharapkan.
