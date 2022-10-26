@@ -110,20 +110,20 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
   
 |	|  MovieName|	MovieGenre|
 |-------|-----------|-------------|
-|0	|blood diamond|	Adventure, Drama, Thriller
-|1	|deliverance|	Adventure, Drama, Thriller
-|2	|le salaire de la peur|	Adventure, Drama, Thriller
-|3	|das boot|	Adventure, Drama, Thriller
-|4	|mission impossible fallout|	Action, Adventure, Thriller
-|5	|goldfinger	|Action, Adventure, Thriller
-|6	|skyfall	|Action, Adventure, Thriller
-|7	|casino royale	|Action, Adventure, Thriller
-|8	|die hard with a vengeance|	Action, Adventure, Thriller
-|9	|north by northwest	|Adventure, Mystery, Thriller
+|0	|blood diamond|	Adventure, Drama, Thriller|
+|1	|deliverance|	Adventure, Drama, Thriller|
+|2	|le salaire de la peur|	Adventure, Drama, Thriller|
+|3	|das boot|	Adventure, Drama, Thriller|
+|4	|mission impossible fallout|	Action, Adventure, Thriller|
+|5	|goldfinger	|Action, Adventure, Thriller|
+|6	|skyfall	|Action, Adventure, Thriller|
+|7	|casino royale	|Action, Adventure, Thriller|
+|8	|die hard with a vengeance|	Action, Adventure, Thriller|
+|9	|north by northwest	|Adventure, Mystery, Thriller|
 
-    <em>Gambar 6. Hasil dari Content-based filtering</em> 
+   <em>Gambar 6. Hasil dari Content-based filtering</em> 
 
-    Model berhasil memberikan rekomendasi 10 film dengan genre yang sama seperti yang diharapkan.
+   Model berhasil memberikan rekomendasi 10 film dengan genre yang sama seperti yang diharapkan.
     
 
 ## Evaluasi
