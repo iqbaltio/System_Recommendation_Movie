@@ -89,12 +89,52 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
 
 - Lalu setelah melakukan teknik *cosine similarity* dan muncul rekomendasi, maka saya mencoba membuat fungsi untuk meminta rekomendasi film berdasarkan judul yang saya inputkan.
     ```
-    get_Movie_Recommendations('big hero 6')
+    get_Movie_Recommendations('jaws')
     ```
 
-- Dan berikut adalah hasil 10 anime yang direkomendasikan dari model *content-based filtering* :
-  ![hasilrek](https://user-images.githubusercontent.com/77862455/197954543-d4205574-cf51-453a-bf55-f4fef0af908e.PNG)
+- Dan berikut adalah hasil 10 film yang direkomendasikan dari model *content-based filtering* :
+  ![Capture](https://user-images.githubusercontent.com/77862455/197955219-9684cc54-1ddc-446b-bbee-8f25804db60c.PNG)
 
     <em>Gambar 6. Hasil dari Content-based filtering</em> 
 
     Model berhasil memberikan rekomendasi 10 film dengan genre yang sama seperti yang diharapkan.
+    
+
+## Evaluasi
+
+- Hasil evaluasi *Content-based filtering* pada evaluasi model ini saya menggunakan metriks *precision*, berikut adalah hasil analisanya:
+
+- Film yang digunakan sebagai data uji coba adalah Big Hero 6 :
+
+  ![rekom](https://user-images.githubusercontent.com/77862455/197955481-f1ad6790-3c3e-4c22-b0bc-f2e220453f00.PNG)
+
+- Hasil 10 film yang direkomendasikan oleh model :
+
+  ![hasilrek](https://user-images.githubusercontent.com/77862455/197955647-d40cf5b7-b64b-4fe2-9a1f-586583687d57.PNG)
+
+- Untuk mengevaluasi model, saya menampung hasil rekomendasi kedalam variabel ``genre_recom`` kemudian membuat variabel ``get_recom_genre`` untuk menampung genre yang ada pada data uji yang selanjutnya akan dipakai pada evaluasi model
+
+- Setelah itu saya melakukan perulangan berdasarkan genre pada data hasil rekomendasi dan melakukan implementasi dari formula precision
+
+- Berikut adalah hasil dari formula precision
+
+    | Genre           	    | Akurasi 	|
+    |-----------------	    |----------	|
+    | Animation            	| 100.0     |
+    | Action                | 100.0     |
+    | Adventure       	    | 100.0     |
+    
+    Hasil yang diberikan cukup baik sehingga dari sini saya bisa mengetahui bahwa model yang saya kembangkan berjalan sesuai dengan yang saya inginkan
+
+- Rumus Metriks Precision
+ 
+$$ Precision = {tp \over tp+fp} $$
+
+- Dimana :
+    - TP = True Positives
+    - FP = False Positives
+
+### Kesimpulan
+- Model terbaik, yaitu Content Based Filtering dapat memprediksi dengan akurasi hingga 100%
+- Sistem rekomendasi dapat berjalan dengan baik, dimana sistem ini dapat memberikan rekomendasi film yang sesuai dengan judul dan genre yang di minta oleh user
+- Hasil prediksi mungkin akan lebih baik apabila data tidak memiliki nilai unknown yang banyak.
