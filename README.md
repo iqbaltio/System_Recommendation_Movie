@@ -42,7 +42,7 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
 #### Univariate Analysis
 - Informasi yang bisa didapat dari hasil eksplorasi pada variabel pada dataset
 
-    ![Bar_chart](https://user-images.githubusercontent.com/77862455/197951116-7469c44c-9472-4f14-aa14-7d74a6b748df.png)
+    ![rating](https://user-images.githubusercontent.com/77862455/197952430-2c4a08e3-d794-4549-827d-70b68eec8446.PNG)
 
     <em>Gambar 1. Univariate Analysis</em>
 
@@ -50,7 +50,7 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
     - Film dengan rating U memiliki jumlah paling banyak
     - Film dengan rating GP memiliki jumlah paling sedikit
 
-    ![distplot](https://user-images.githubusercontent.com/77862455/197951534-8e83aef9-dd95-46e8-9577-b6bb04f782d7.png)
+    ![displot](https://user-images.githubusercontent.com/77862455/197952484-b58c26f1-af7e-42db-8ad6-53407ed9706d.PNG)
 
     <em>Gambar 2. Univariate Analysis</em>
 
