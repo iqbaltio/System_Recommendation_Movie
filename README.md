@@ -108,18 +108,18 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
 
 - Dan berikut adalah hasil 10 film yang direkomendasikan dari model *content-based filtering* :
   
-  | MovieName	| MovieGenre|
-  |-----------|-----------|
-	|kubo and the two strings|	Animation, Action, Adventure|
-	|spider man into the spider verse|	Animation, Action, Adventure|
-	|mononoke hime|	Animation, Action, Adventure|
-	|incredibles 2|	Animation, Action, Adventure|
-	|the iron giant|	Animation, Action, Adventure|
-	|the incredibles|	Animation, Action, Adventure|
-	|how to train your dragon|	Animation, Action, Adventure|
-	|how to train your dragon 2|	Animation, Action, Adventure|
-	|tangled|	Animation, Adventure, Comedy|
-	|batman begins|	Action, Adventure|
+|	|  MovieName|	MovieGenre|
+|-------|-----------|-------------|
+|0	|blood diamond|	Adventure, Drama, Thriller
+|1	|deliverance|	Adventure, Drama, Thriller
+|2	|le salaire de la peur|	Adventure, Drama, Thriller
+|3	|das boot|	Adventure, Drama, Thriller
+|4	|mission impossible fallout|	Action, Adventure, Thriller
+|5	|goldfinger	|Action, Adventure, Thriller
+|6	|skyfall	|Action, Adventure, Thriller
+|7	|casino royale	|Action, Adventure, Thriller
+|8	|die hard with a vengeance|	Action, Adventure, Thriller
+|9	|north by northwest	|Adventure, Mystery, Thriller
 
     <em>Gambar 6. Hasil dari Content-based filtering</em> 
 
@@ -132,11 +132,24 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
 
 - Film yang digunakan sebagai data uji coba adalah Big Hero 6 :
 
-  ![rekom](https://user-images.githubusercontent.com/77862455/197955481-f1ad6790-3c3e-4c22-b0bc-f2e220453f00.PNG)
+  |	|MovieName	|MovieGenre|
+  |-----|---------------|----------|
+  |434	|big hero 6	|Animation, Action, Adventure|
 
 - Hasil 10 film yang direkomendasikan oleh model :
 
-  ![hasilrek](https://user-images.githubusercontent.com/77862455/197955647-d40cf5b7-b64b-4fe2-9a1f-586583687d57.PNG)
+  | MovieName	| MovieGenre|
+  |-----------|-----------|
+	|kubo and the two strings|	Animation, Action, Adventure|
+	|spider man into the spider verse|	Animation, Action, Adventure|
+	|mononoke hime|	Animation, Action, Adventure|
+	|incredibles 2|	Animation, Action, Adventure|
+	|the iron giant|	Animation, Action, Adventure|
+	|the incredibles|	Animation, Action, Adventure|
+	|how to train your dragon|	Animation, Action, Adventure|
+	|how to train your dragon 2|	Animation, Action, Adventure|
+	|tangled|	Animation, Adventure, Comedy|
+	|batman begins|	Action, Adventure|
 
 - Untuk mengevaluasi model, saya menampung hasil rekomendasi kedalam variabel ``genre_recom`` kemudian membuat variabel ``get_recom_genre`` untuk menampung genre yang ada pada data uji yang selanjutnya akan dipakai pada evaluasi model
 
