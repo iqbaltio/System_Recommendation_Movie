@@ -46,7 +46,7 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
 
     <em>Gambar 1. Univariate Analysis</em>
 
-- Informasi yang saya dapat dari data diatas adalah :
+- Informasi yang saya dapat dari gambar 1 diatas adalah :
     - Film dengan rating U memiliki jumlah paling banyak
     - Film dengan rating GP memiliki jumlah paling sedikit
 
@@ -54,9 +54,10 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
 
     <em>Gambar 2. Univariate Analysis</em>
 
-- Informasi yang saya dapat dari data diatas adalah :
+- Informasi yang saya dapat dari gambar 2 diatas adalah :
     - Banyak film yang memiliki rentang nilai dari 7-8 dibandingkan dengan rentang yang lainnya.
 
+Dengan visualisasi adanya univariate analysis gambar 1 adalah kita bisa melihat semua rating dari film yang berada di dataset dan memiliki tujuan untuk memperlihatkan rata-rata rating umur pada dataset ini. Pada gambar 2 menjelaskan tentang rating imdb sumbu x menjelaskan tentang bilangan bulat sedangkan sumbu y memperlihatkan desimal dan gambar 2 memiliki tujuan bahwa rata-rata film memiliki rating lumayan tinggi.
 
 #### Multivariate Analysis
 
@@ -64,11 +65,17 @@ Dataset yang saya pakai adalah [IMDB Movies Dataset](https://www.kaggle.com/data
 
  <em>Gambar 3. Multivariate Analysis</em>
 
+Pada data yang digunakan untuk proyek kali ini bisa kita lihat pada gambar 3 bahwa memiliki korelasi yang bagus 
+
 ## Data Preparation
 
 Sebelum melakukan pembuatan model, perlu dilakukan data preparation, berikut adalah hal yang dilakukan pada proses data preparation
 
-- **Drop Missing Value** : ini bertujuan untuk membersihkan data agar tidak ada data yang kosong, karena data kosong sangat mempengaruhi hasil akurasi dari model, disini saya membuang beberapa variabel yaitu 'Poster_Link','Released_Year', 'Runtime', 'Overview', 'Star1', 'Star2', 'Star3', 'Star4', 'No_of_Votes', 'Gross'
+- **Drop Missing Value** : ini bertujuan untuk membersihkan data agar tidak ada data yang kosong, karena data kosong sangat mempengaruhi hasil akurasi dari model, disini saya membuang beberapa variabel yaitu 'Poster_Link','Released_Year', 'Runtime', 'Overview', 'Star1', 'Star2', 'Star3', 'Star4', 'No_of_Votes', 'Gross'. Untuk melakukan drop missing value saya menggunakan :
+```
+    movieData = movieData.dropna(subset=['Certificate', 'Meta_score'])
+```
+Saya menggunakan ``dropna`` karena saya akan membersihkan missing value pada kolom Certificate dan Meta_score pada data
 
 - **Text Cleaning** : ini bertujuan untuk menghapus simbol ataupun teks yang tidak diperlukan dan mengubah semua huruf menjadi huruf kecil
 
@@ -79,11 +86,18 @@ Model yang saya gunakan pada data ini adalah dengan menggunakan teknik *content-
 - Selanjutnya saya melakukan fit dan transformasi kedalam bentuk matriks, untuk menghitung derajat kesamaan antar film, disini saya menggunakan teknik *cosine similarity*
 - Berikut adalah hasil dari teknik *cosine similarity*
 
-    ![cosine](https://user-images.githubusercontent.com/77862455/197954157-9ad97dee-f019-465b-9119-408ce626ea20.PNG)
-
-    <em>Gambar 4. Hasil dari Cosine Similarity</em>
-
-    ![hasilcosine](https://user-images.githubusercontent.com/77862455/197954208-26f4e08f-894f-4cd7-b92c-ca70546dc7de.PNG)
+    |MovieName	                    |un proph te	|nebraska	|2001 a space odyssey|	kagemusha	|donnie darko|			
+    |----------                     |-------------|---------|--------------------|------------|------------|
+    |300	                          | 0.207039	  | 0.161416|	0.000000           |	0.107119  |	0.098255   |
+    |crimes and misdemeanors	      |0.217754	    |0.751518	|0.000000	           |0.112663	  |0.103340    |
+    |king kong	                    |0.000000	    |0.227429	|0.777964	           |0.000000	  |0.566560    |
+    |gandhi	                        |0.121595	    |0.094800	|0.000000	           |0.563195	  |0.057705    |
+    |the breakfast club	            |0.217754	    |0.751518	|0.000000	           |0.112663	  |0.103340    |
+    |fear and loathing in las vegas	|0.163646	    |1.000000	|0.292339	           |0.084668	  |0.077662    |
+    |wall e	                        |0.000000	    |0.291512	|0.195810	           |0.000000	  |0.000000    |
+    |hell or high water	            |0.741673	    |0.121372	|0.000000	           |0.080545	  |0.073880    |
+    |rushmore	                      |0.147323	    |0.508445	|0.000000	           |0.076223	  |0.069915    |
+    |donnie brasco	                |0.689939	    |0.112906	|0.000000	           |0.074927	  |0.068726    |
 
     <em>Gambar 5. Hasil dari Cosine Similarity</em>
 
